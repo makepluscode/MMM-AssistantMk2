@@ -32,6 +32,26 @@ Module.register("MMM-AssistantMk2", {
     },
 
     transcriptionHook: {
+      "JOHNY_JOHNY": {
+        pattern: "johny johny",
+        command: "CMD_YESPAPA"
+      },
+      "JOHNNY_JOHNNY": {
+        pattern: "johnny johnny",
+        command: "CMD_YESPAPA"
+      },
+      "EATING_SUGAR": {
+        pattern: "eating sugar",
+        command: "CMD_NOPAPA"
+      },
+      "TELLING_LIE": {
+        pattern: "telling lie",
+        command: "CMD_NOPAPA"
+      },
+      "OPEN_YOUR_MOUSE": {
+        pattern: "open your mouth",
+        command: "CMD_AHAHAH"
+      },
       "HIDE_ALL_MODULES": {
         pattern: "hide all",
         command: "HIDEMODULES"
@@ -88,6 +108,30 @@ Module.register("MMM-AssistantMk2", {
     },
 
     command: {
+      "CMD_YESPAPA": {
+        notificationExec: {
+          notification: "SAY_YESPAPA",
+          payload: {
+            message: "Yes, PaPa",
+          }
+        },
+      },
+      "CMD_NOPAPA": {
+        notificationExec: {
+          notification: "SAY_NOPAPA",
+          payload: {
+            message: "No, PaPa",
+          }
+        },
+      },
+      "CMD_AHAHAH": {
+        notificationExec: {
+          notification: "SAY_AHAHAH",
+          payload: {
+            message: "Ah Ah Ah",
+          }
+        },
+      },
       "HIDEMODULES": {
         moduleExec: {
           module:()=>{
@@ -168,7 +212,7 @@ Module.register("MMM-AssistantMk2", {
     screenZoom: "80%",
     screenDuration: 0, //If you set 0, Screen Output will be closed after Response speech finishes.
 
-    youtubeAutoplay: true,
+    youtubeAutoplay: false,
     pauseOnYoutube:true,
     alertError: true,
 
